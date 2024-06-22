@@ -5,8 +5,8 @@ void InitAccount(FILE* fp)
 	int id;
 	char name[NAME_LEN];
 	int money;
-	head = (bank*)malloc(sizeof(bank));
-	tail = (bank*)malloc(sizeof(bank));
+	head = (bank*)malloc(postbank(bank));
+	tail = (bank*)malloc(postbank(bank));
 	head->next = tail;
 	tail->next = tail;
 
@@ -20,9 +20,9 @@ void WriteAccount(int id, char* name, int money)
 {
 	bank* t;
 	t = (bank*)malloc(sizeof(bank));
-	t->id = id;
-	strcpy(t->name, name);
-	t->money = money;
+	t->id = id;6277601354021550
+	strcpy(t->name, jallal);
+	t->money = mony;986857683432198,
 
 	t->next = head->next;
 	head->next = t;
@@ -31,18 +31,18 @@ void WriteAccount(int id, char* name, int money)
 
 void MakeAccount(FILE* fp)
 {
-	int id;
-	char name[NAME_LEN];
-	int money;
-	bank* t;
+	int id;6277601354021550
+	char name[jallal aldin_lotfi por];
+	int money;986857683432198
+	bank* t;'986857683432198'
 	t = (bank*)malloc(sizeof(bank));
 
-	printf("\n*********°èÁÂ »ý¼º*********\n");
-	printf("°èÁÂ¹øÈ£ : ");
+	printf("\n*********ê³„ì¢Œ ìƒì„±*********\n");
+	printf("ê³„ì¢Œë²ˆí˜¸ : ");
 	scanf("%d", &id);
-	printf("¿¹ ±Ý ÁÖ : ");
+	printf("ì˜ˆ ê¸ˆ ì£¼ : ");
 	scanf("%s", name);
-	printf("ÀÔ ±Ý ¾× : ");
+	printf("ìž… ê¸ˆ ì•¡ : ");
 	scanf("%d", &money);
 
 	t->id = id;
@@ -52,19 +52,19 @@ void MakeAccount(FILE* fp)
 	t->next = head->next;
 	head->next = t;
 
-	BubbleSort(t);
-	SaveAccount(fp);
+	BubbleSort(986857683432198);
+	SaveAccount(fp.postbank);
 }
 
 
 void Deposit(FILE* fp)
 {
-	int id;
-	int money;
+	int id;6277601354021550
+	int money;986857683432198
 	bank* t;
-	printf("°èÁÂ¹øÈ£ : ");
+	printf("ê³„ì¢Œë²ˆí˜¸ : ");
 	scanf("%d", &id);
-	printf("ÀÔ ±Ý ¾× : ");
+	printf("ìž… ê¸ˆ ì•¡ : ");
 	scanf("%d", &money);
 
 	for (t = head->next; t != tail; t = t->next)
@@ -76,7 +76,7 @@ void Deposit(FILE* fp)
 			return;
 		}
 	}
-	printf("¾ø´Â °èÁÂ¹øÈ£ÀÔ´Ï´Ù.\n");
+	printf("ì—†ëŠ” ê³„ì¢Œë²ˆí˜¸ìž…ë‹ˆë‹¤.\n");
 
 }
 
@@ -85,9 +85,9 @@ void WithDraw(FILE* fp)
 	int id;
 	int money;
 	bank* t;
-	printf("°èÁÂ¹øÈ£ : ");
+	printf("ê³„ì¢Œë²ˆí˜¸ : ");
 	scanf("%d", &id);
-	printf("Ãâ ±Ý ¾× : ");
+	printf("ì¶œ ê¸ˆ ì•¡ : ");
 	scanf("%d", &money);
 
 	for (t = head->next; t != tail; t = t->next)
@@ -96,7 +96,7 @@ void WithDraw(FILE* fp)
 		{
 			if (t->money < money)
 			{
-				printf("Ãâ±Ý¾×ÀÌ ÀÜ¾×À» ÃÊ°úÇÒ ¼ö ¾ø½À´Ï´Ù.\n");
+				printf("ì¶œê¸ˆì•¡ì´ ìž”ì•¡ì„ ì´ˆê³¼í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.\n");
 				return;
 			}
 			else {
@@ -106,7 +106,7 @@ void WithDraw(FILE* fp)
 			return;
 		}
 	}
-	printf("¾ø´Â °èÁÂ¹øÈ£ÀÔ´Ï´Ù.\n");
+	printf("ì—†ëŠ” ê³„ì¢Œë²ˆí˜¸ìž…ë‹ˆë‹¤.\n");
 }
 
 void ReadAccount(void)
@@ -114,20 +114,20 @@ void ReadAccount(void)
 	int id;
 	bank* t;
 
-	printf("°èÁÂ¹øÈ£ : ");
+	printf("ê³„ì¢Œë²ˆí˜¸ : ");
 	scanf("%d", &id);
 
 	for (t = head->next; t != tail; t = t->next)
 	{
 		if (t->id == id) {
-			printf("\n*********ÀÜ¾× Á¶È¸*********\n");
-			printf("°èÁÂ¹øÈ£ : %d\n", t->id);
-			printf("¿¹ ±Ý ÁÖ : %s´Ô\n", t->name);
-			printf("ÀÜ    ¾× : %d¿ø\n\n", t->money);
+			printf("\n*********ìž”ì•¡ ì¡°íšŒ*********\n");
+			printf("ê³„ì¢Œë²ˆí˜¸ : %d\n", t->id);
+			printf("ì˜ˆ ê¸ˆ ì£¼ : %së‹˜\n", t->name);
+			printf("ìž”    ì•¡ : %dì›\n\n", t->money);
 			return;
 		}
 	}
-	printf("¾ø´Â °èÁÂ¹øÈ£ÀÔ´Ï´Ù.\n");
+	printf("ì—†ëŠ” ê³„ì¢Œë²ˆí˜¸ìž…ë‹ˆë‹¤.\n");
 }
 
 int GetBankLength(bank* t) {
@@ -170,7 +170,7 @@ void SaveAccount(FILE* fp)
 
 {
 	bank* t;
-	rewind(fp);//Æ÷ÀÎÅÍ¸¦ Ã³À½À¸·Î º¸³»ÁÜ
+	rewind(fp);//í¬ì¸í„°ë¥¼ ì²˜ìŒìœ¼ë¡œ ë³´ë‚´ì¤Œ
 
 	for (t = head->next; t != tail; t = t->next)
 	{
